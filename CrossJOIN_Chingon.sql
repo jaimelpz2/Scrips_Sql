@@ -1,0 +1,22 @@
+--select ROW_NUMBER() over(order by mo.idmodelo)+(select max(IdModCalSer) from ParaModCalSer)IdModCalSer,mo.IdModelo,
+--case when q1.s1  = 'A' then 1 when q1.s1  = 'B' then 2 when q1.s1  = 'C' then 3 end Numero,
+--case when q1.s1 = 'A'  then  ae.periodo  
+--when q1.s1 = 'B' then isnull((select top 1 periodo from servicios$ se
+--where q1.s1 =servicio and se.Linea = lin.Nombre ) ,0)
+--when q1.s1 = 'C' then isnull((select top 1 periodo from servicios$ se
+-- where q1.s1 =servicio and se.Linea = lin.Nombre ),0)
+--end periodo,
+
+--case when q1.s1  = 'A' then 'PREVENTIVO MENOR' when q1.s1  = 'B' then 'PREVENTIVO INTERMEDIO' when q1.s1  = 'C' then 'PREVENTIVO MAYOR' end Servicio
+--,null IdModeloVersion, null NoRecurrente
+--from Servicios$ AE
+--cross join (
+--select 'A' as s1
+--union select 'B'
+--union select 'C'
+--) as q1
+----where IdModelo = 1
+--inner join CataModelos mo on mo.Nombre = ae.Modelos
+--inner join CataLineas lin on lin.IdLinea = mo.IdLinea
+--group by lin.Nombre,mo.IdModelo,mo.Nombre,q1.s1,periodo
+--order by IdModelo,Numero asc 
